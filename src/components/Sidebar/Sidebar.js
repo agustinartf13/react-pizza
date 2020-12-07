@@ -6,12 +6,15 @@ import {
   SidebarLink,
   SideBtnWrap,
   SidebarRoute,
+  CloseIcon,
 } from "./SidebarElement";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer>
-      <Icon></Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
+          <CloseIcon />
+      </Icon>
       <SidebarMenu>
         <SidebarLink to="/">Pizzas</SidebarLink>
         <SidebarLink to="/">Desserts</SidebarLink>
